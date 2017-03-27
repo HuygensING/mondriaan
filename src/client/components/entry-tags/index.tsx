@@ -1,0 +1,25 @@
+import * as React from 'react';
+
+export const Ab = (props) => <div className="ab">{props.children}</div>;
+export const Add = (props) => <div className="add">{props.children}</div>;
+export const AddrLine = (props) => <div className="addrline">{props.children}</div>;
+export const Address = (props) => <div className="address">{props.children}</div>;
+export const Anchor = (props) => <div className="anchor">{props.children}</div>;
+export const Body = (props) => <div className="body">{props.children}</div>;
+export const C = (props) => <div className="c">{props.children}</div>;
+export const Choice = (props) => <div className="choice">{props.children}</div>;
+export const Corr = (props) => <div className="corr">{props.children}</div>;
+export const Del = (props) => <div className="del">{props.children}</div>;
+export const Div = (props) => <div className="div">{props.children}</div>;
+export const Gap = (props) => <div className="gap">{props.children}</div>;
+export const Hi = (props) => <div className="hi">{props.children}</div>;
+export const Lb = (props) => <div className="lb">{props.children}</div>;
+export const MdPostmark = (props) => <div className="mdpostmark">{props.children}</div>;
+export const Note = (props) => <div className="note">{props.children}</div>;
+export const P = (props) => <div className="p">{props.children}</div>;
+export const Pb = (props) => <div className="pb">{props.children}</div>;
+export const Retrace = (props) => <div className="retrace">{props.children}</div>;
+export const Sic = (props) => <div className="sic">{props.children}</div>;
+export const Space = (props) => <div className="space">{props.children}</div>;
+export const Supplied = (props) => <div className="supplied">{props.children}</div>;
+export const Unclear = (props) => <div className="unclear">{props.children}</div>;
