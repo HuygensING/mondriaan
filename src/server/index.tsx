@@ -14,7 +14,6 @@ app.get('*', (req, res) => {
 
 	const html = ReactDOMServer.renderToString(
 		<StaticRouter
-			history={{}}
 			location={req.url}
 			context={context}
 		>
