@@ -1,25 +1,41 @@
 import * as React from 'react';
+import styled from 'styled-components';
 
-export const Ab = (props) => <div className="ab">{props.children}</div>;
-export const Add = (props) => <div className="add">{props.children}</div>;
-export const AddrLine = (props) => <div className="addrline">{props.children}</div>;
-export const Address = (props) => <div className="address">{props.children}</div>;
-export const Anchor = (props) => <div className="anchor">{props.children}</div>;
-export const Body = (props) => <div className="body">{props.children}</div>;
-export const C = (props) => <div className="c">{props.children}</div>;
-export const Choice = (props) => <div className="choice">{props.children}</div>;
-export const Corr = (props) => <div className="corr">{props.children}</div>;
-export const Del = (props) => <div className="del">{props.children}</div>;
-export const Div = (props) => <div className="div">{props.children}</div>;
-export const Gap = (props) => <div className="gap">{props.children}</div>;
-export const Hi = (props) => <div className="hi">{props.children}</div>;
-export const Lb = (props) => <div className="lb">{props.children}</div>;
-export const MdPostmark = (props) => <div className="mdpostmark">{props.children}</div>;
-export const Note = (props) => <div className="note">{props.children}</div>;
-export const P = (props) => <div className="p">{props.children}</div>;
-export const Pb = (props) => <div className="pb">{props.children}</div>;
-export const Retrace = (props) => <div className="retrace">{props.children}</div>;
-export const Sic = (props) => <div className="sic">{props.children}</div>;
-export const Space = (props) => <div className="space">{props.children}</div>;
-export const Supplied = (props) => <div className="supplied">{props.children}</div>;
-export const Unclear = (props) => <div className="unclear">{props.children}</div>;
+const Tag = styled.div`
+	display: inline;
+	line-height: 1.5em;
+`;
+
+export const Linenumber = styled.span`
+	color: gray;
+	margin-left: -3em;
+	position: absolute;
+	text-align: right;
+	width: 2em;
+`;
+
+import Lb from './lb';
+export { Lb };
+
+export const Ab = (props) => <Tag className="ab">{props.children}</Tag>;
+export const Add = (props) => <Tag className="add">{props.children}</Tag>;
+export const AddrLine = (props) => <Tag className="addrline">{props.children}</Tag>;
+export const Address = (props) => <Tag className="address">{props.children}</Tag>;
+export const Anchor = (props) => <Tag className="anchor">{props.children}</Tag>;
+export const Body = (props) => <Tag className="body">{props.children}</Tag>;
+export const C = (props) => <Tag className="c">{props.children}</Tag>;
+export const Choice = (props) => <Tag className="choice">{props.children}</Tag>;
+export const Corr = (props) => <Tag className="corr">{props.children}</Tag>;
+export const Del = (props) => <Tag className="del">{props.children}</Tag>;
+export const Div = (props) => <Tag className="div">{props.children}</Tag>;
+export const Gap = (props) => <Tag className="gap">{props.children}</Tag>;
+export const Hi = (props) => <Tag className="hi">{props.children}</Tag>;
+export const MdPostmark = (props) => <Tag className="mdpostmark">{props.children}</Tag>;
+export const Note = (props) => <Tag className="note">{props.children}</Tag>;
+export const P = (props) => <Tag className="p">{props.children}</Tag>;
+export const Pb = (props) => <Tag className="pb">{props.children}</Tag>;
+export const Retrace = (props) => <Tag className="retrace">{props.children}</Tag>;
+export const Sic = (props) => <Tag className="sic">{props.children}</Tag>;
+export const Space = (props) => <Tag className="space">{props.children}</Tag>;
+export const Supplied = (props) => <Tag className="supplied">{props.children}</Tag>;
+export const Unclear = (props) => <Tag className="unclear">{props.children}</Tag>;
