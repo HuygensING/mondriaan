@@ -26,8 +26,14 @@
     "@types/react-router": "^4.0.1",
     "@types/react-router-dom": "^4.0.1",
     "awesome-typescript-loader": "^3.1.2",
+    "browser-sync": "^2.18.8",
+    "bundle-loader": "^0.5.5",
+    "connect-modrewrite": "^0.10.1",
+    "lodash.debounce": "^4.0.8",
     "nodemon": "^1.11.0",
+    "proxy-middleware": "^0.15.0",
     "typescript": "^2.2.1",
+    "url": "^0.11.0",
     "webpack": "^2.3.2"
   }
 }

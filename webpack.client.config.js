@@ -3,8 +3,9 @@ const path = require('path');
 module.exports = {
 	entry: "./src/client/index.tsx",
 	output: {
-		filename: "bundle.js",
-		path: __dirname + "/build/client"
+		filename: "[name].js",
+		path: __dirname + "/build/client",
+		publicPath: '/build/client/',
 	},
 	resolve: {
 		alias: {
@@ -25,5 +26,9 @@ module.exports = {
 				}
 			}
 		]
+	},
+	externals: {
+		"react": "React",
+		"react-dom": "ReactDOM",
 	},
 };
