@@ -5,7 +5,8 @@
     "module": "commonjs",
     "outDir": "./build",
     "paths": {
-      "src/*": ["./src/*"]
+      "src/*": ["./src/*"],
+      "entries/*": ["./__entries__/*"]
     },
     "removeComments": true,
     "target": "es6"

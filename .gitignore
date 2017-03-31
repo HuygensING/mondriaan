@@ -1,6 +1,6 @@
 .idea
 build
 dist
-mondriaan.iml
+mondrian-client.iml
 node_modules
-src/common/entries
+__entries__

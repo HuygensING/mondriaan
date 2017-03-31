@@ -7,7 +7,7 @@ export default () => (
 	<div className="app">
 		<Link to="/">Home</Link>
 		<br />
-		<Link to="/writing/schetsboek-1">Schetsboek 1</Link>
+		<Link to="/writing/schetsboek-2">Schetsboek 2</Link>
 		<br />
 		<Link to="/writing/bepaalde-en-onbepaalde">Bepaald en onbepaald</Link>
 		<br />

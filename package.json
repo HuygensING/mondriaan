@@ -7,33 +7,29 @@
     "build": "webpack",
     "dist": "webpack -p --output-path dist",
     "server": "./server.js",
-    "statics": "mondriaan-statics",
+    "entries": "mondrian-entries",
     "watch": "webpack -w"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.2",
+    "mondrian-components": "^1.0.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-router": "^4.0.0",
     "react-router-dom": "^4.0.0",
     "styled-components": "^1.4.4"
   },
   "devDependencies": {
-    "@types/express": "^4.0.35",
-    "@types/node": "^7.0.11",
-    "@types/react-router": "^4.0.1",
+    "@types/node": "^7.0.12",
     "@types/react-router-dom": "^4.0.1",
     "awesome-typescript-loader": "^3.1.2",
     "browser-sync": "^2.18.8",
     "bundle-loader": "^0.5.5",
     "connect-modrewrite": "^0.10.1",
     "lodash.debounce": "^4.0.8",
-    "nodemon": "^1.11.0",
+    "mondrian-entries": "^1.0.1",
     "proxy-middleware": "^0.15.0",
     "typescript": "^2.2.1",
-    "uglify-js": "github:mishoo/UglifyJS2#harmony",
     "url": "^0.11.0",
     "webpack": "^2.3.2"
   }

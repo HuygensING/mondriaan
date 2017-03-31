@@ -10,6 +10,7 @@ module.exports = {
 	resolve: {
 		alias: {
 			src: path.resolve(__dirname, 'src'),
+			entries: path.resolve(__dirname, '__entries__'),
 		},
 		// Add '.ts' and '.tsx' as resolvable extensions.
 		extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
