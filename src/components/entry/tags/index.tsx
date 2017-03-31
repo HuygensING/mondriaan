@@ -3,16 +3,18 @@ import styled from 'styled-components';
 
 const Tag = styled.div`
 	display: inline;
-	font-size: 24px;
-	line-height: 36px;
 `;
 
+// Linebreak
 export const Lb = styled(Tag)`
 	display: block;
 	font-size: 16px;
 `;
 
-export const Linenumber = styled.span`
+// No is short for "number". No is a child of <Lb>, so it
+// really is: Linenumber, but because it is used so frequently
+// byte size does matter in this case.
+export const No = styled.span`
 	color: gray;
 	margin-left: -3em;
 	margin-top: 2px;
@@ -21,6 +23,7 @@ export const Linenumber = styled.span`
 	width: 2em;
 `;
 
+// Pagebreak
 export const Pb = styled.div`
 	background: #EEE;
 	border: 1px solid #CCC;
@@ -43,14 +46,17 @@ export const Add = styled.span`
 	}
 `;
 
+// Incorrect reproduced text
 export const Sic = styled(Tag)`
 	border-bottom: 1px solid #AAA;
 `;
 
+// The correction of the Sic
 export const Corr = styled(Tag)`
 	border: 1px solid #AAA;
 `;
 
+// Highlighted (to add styling)
 export const Hi = styled(Tag)`
 	text-decoration: ${props => props['data-rend'] === 'underline' ? 'underline' : 'none'}
 	vertical-align: ${props => props['data-rend'] === 'super' ? 'super' : 'baseline'}

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "build-dist": "webpack -p",
+    "dist": "webpack -p --output-path dist",
     "server": "./server.js",
     "statics": "mondriaan-statics",
     "watch": "webpack -w"

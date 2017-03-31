@@ -7,6 +7,8 @@ const Wrapper = styled.div`
 `;
 
 const EntryText = styled.div`
+	font-size: 18px;
+	line-height: 36px;
 	position: relative;
 	width: 40%;
 `;
