@@ -3,19 +3,15 @@
     "baseUrl": ".",
     "jsx": "react",
     "module": "commonjs",
-    "outDir": "./build/server",
+    "outDir": "./build",
     "paths": {
-      "client/*": ["./src/client/*"],
-      "common/*": ["./src/common/*"]
+      "src/*": ["./src/*"]
     },
     "removeComments": true,
     "target": "es6"
   },
   "exclude": ["./node_modules"],
   "include": [
-    "./src/server/**/*.tsx",
-    "./src/server/**/*.ts",
-    "./src/common/**/*.tsx",
-    "./src/common/**/*.ts"
+    "./src/index.tsx"
   ]
 }

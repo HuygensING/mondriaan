@@ -13,6 +13,7 @@ const watchFiles = [
 ];
 
 function onFilesChanged(event, file) {
+	console.log(event, file);
 	if (event === 'change') {
 		browserSync.reload(file);
 	}
@@ -29,10 +30,6 @@ browserSync.init({
 		middleware: [
 			proxy(proxyOptions),
 			modRewrite([
-				// '^/css/(.*)$ /css/$1 [L]',
-				// '^/js/(.*)$ /js/$1 [L]',
-				// '^/images/(.*)$ /images/$1 [L]',
-				// '^/fonts/(.*)$ /fonts/$1 [L]',
 				'^[^\\.]*$ /index.html [L]'
 			])
 		]

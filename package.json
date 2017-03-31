@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "server": "nodemon build/server/bundle.js",
+    "build-dist": "webpack -p",
+    "server": "./server.js",
     "statics": "mondriaan-statics",
-    "watch": "webpack -w --config webpack.client.config.js",
-    "watch-server": "webpack -w --config webpack.server.config.js"
+    "watch": "webpack -w"
   },
   "author": "",
   "license": "ISC",
@@ -33,6 +33,7 @@
     "nodemon": "^1.11.0",
     "proxy-middleware": "^0.15.0",
     "typescript": "^2.2.1",
+    "uglify-js": "github:mishoo/UglifyJS2#harmony",
     "url": "^0.11.0",
     "webpack": "^2.3.2"
   }

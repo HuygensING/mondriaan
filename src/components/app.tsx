@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link, Route } from 'react-router-dom';
-import Home from '../client/components/home';
-import Entry from '../client/components/entry';
+import Home from './home';
+import Entry from './entry';
 
 export default () => (
 	<div className="app">

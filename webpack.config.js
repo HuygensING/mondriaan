@@ -1,16 +1,15 @@
 const path = require('path');
 
 module.exports = {
-	entry: "./src/client/index.tsx",
+	entry: "./src/index.tsx",
 	output: {
 		filename: "[name].js",
-		path: __dirname + "/build/client",
-		publicPath: '/build/client/',
+		path: __dirname + "/build",
+		publicPath: '/build/',
 	},
 	resolve: {
 		alias: {
-			client: path.resolve(__dirname, 'src/client'),
-			common: path.resolve(__dirname, 'src/common'),
+			src: path.resolve(__dirname, 'src'),
 		},
 		// Add '.ts' and '.tsx' as resolvable extensions.
 		extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
@@ -21,9 +20,6 @@ module.exports = {
 			{
 				test: /\.tsx?$/,
 				loader: "awesome-typescript-loader",
-				options: {
-					configFileName: './tsconfig.client.json',
-				}
 			}
 		]
 	},
