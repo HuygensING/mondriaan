@@ -1,0 +1,11 @@
+version: "3"
+services:
+  solr:
+    build:
+      context: .
+      dockerfile: Dockerfile-solr
+    ports:
+      - "8983:8983"
+    volumes:
+      - ./__solr__:/opt/solr/mondrian_json
+      - ./solrentry.sh:/opt/solr/solrentry.sh
