@@ -4,6 +4,6 @@ const loadBeo = require('bundle-loader?lazy!entries/1918_BepaaldeEnOnbepaalde_ST
 
 export default {
 	'schetsboek-2': loadSchetsboek2,
-	'nieuwe-beelding-in-schilderkunst': loadNbis,
-	'bepaalde-en-onbepaalde': loadBeo,
+	'1917-nieuwebeeldinginschilderkunst-stijl': loadNbis,
+	'1918-bepaaldeenonbepaalde-stijl': loadBeo,
 };
