@@ -21,8 +21,8 @@ function onFilesChanged(event, file) {
 
 browserSync.watch(watchFiles, debounce(onFilesChanged, 300));
 
-const proxyOptions = url.parse('http://demo7.huygens.knaw.nl/test-afp-backend');
-proxyOptions.route = '/api';
+const proxyOptions = url.parse('http://localhost:8983/solr/mondrian/select');
+proxyOptions.route = '/full-text-search';
 
 browserSync.init({
 	server: {

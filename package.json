@@ -13,10 +13,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "hire-forms-input": "^3.0.1",
     "mondrian-components": "^1.0.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
     "react-router-dom": "^4.0.0",
+    "react-router-redux": "^5.0.0-alpha.4",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
     "styled-components": "^1.4.4"
   },
   "devDependencies": {
@@ -27,7 +32,7 @@
     "bundle-loader": "^0.5.5",
     "connect-modrewrite": "^0.10.1",
     "lodash.debounce": "^4.0.8",
-    "mondrian-entries": "^1.0.2",
+    "mondrian-entries": "^1.1.0",
     "proxy-middleware": "^0.15.0",
     "typescript": "^2.2.1",
     "url": "^0.11.0",
