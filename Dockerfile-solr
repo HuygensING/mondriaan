@@ -1,8 +1,0 @@
-FROM solr:6.5-alpine
-
-COPY solrentry.sh /opt/solr/entrypoint.sh
-COPY /__solr__ /opt/solr/mondrian_json
-
-EXPOSE 8983
-
-ENTRYPOINT ["/opt/solr/entrypoint.sh"]

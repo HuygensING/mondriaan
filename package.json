@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "dev": "docker-compose -f docker/docker-compose-dev.yml up",
+    "prod": "docker-compose -f docker/docker-compose-dev.yml -f docker/docker-compose-prod.yml up",
     "dist": "webpack -p --output-path dist",
-    "server": "./server.js",
     "entries": "mondrian-entries",
     "watch": "webpack -w"
   },
@@ -15,8 +16,8 @@
   "dependencies": {
     "hire-forms-input": "^3.0.1",
     "mondrian-components": "^1.0.1",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react": "^15.5.3",
+    "react-dom": "^15.5.3",
     "react-redux": "^5.0.3",
     "react-router-dom": "^4.0.0",
     "react-router-redux": "^5.0.0-alpha.4",
@@ -36,7 +37,7 @@
     "proxy-middleware": "^0.15.0",
     "typescript": "^2.2.1",
     "url": "^0.11.0",
-    "webpack": "^2.3.2",
+    "webpack": "^2.3.3",
     "uglify-js": "git+https://github.com/mishoo/UglifyJS2.git#harmony"
   }
 }
