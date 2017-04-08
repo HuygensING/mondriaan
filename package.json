@@ -36,6 +36,7 @@
     "proxy-middleware": "^0.15.0",
     "typescript": "^2.2.1",
     "url": "^0.11.0",
-    "webpack": "^2.3.2"
+    "webpack": "^2.3.2",
+    "uglify-js": "git+https://github.com/mishoo/UglifyJS2.git#harmony"
   }
 }

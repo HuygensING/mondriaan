@@ -12,7 +12,5 @@
     "target": "es6"
   },
   "exclude": ["./node_modules"],
-  "include": [
-    "./src/index.tsx"
-  ]
+  "include": ["./src/index.tsx"]
 }

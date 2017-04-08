@@ -1,12 +1,8 @@
 FROM solr:6.5-alpine
 
-# USER solr
+COPY solrentry.sh /opt/solr/entrypoint.sh
+COPY /__solr__ /opt/solr/mondrian_json
 
-ADD . /app
-# RUN chmod +x /app/solrentry.sh
+EXPOSE 8983
 
-ENTRYPOINT ["/app/solrentry.sh"]
-
-# RUN /opt/solr/bin/solr start
-# RUN /opt/solr/bin/solr create_core -c mondrian
-# RUN /opt/solr/bin/post -c mondrian mondrian-json/input.json
+ENTRYPOINT ["/opt/solr/entrypoint.sh"]
