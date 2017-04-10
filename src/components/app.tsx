@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux'
 import store from '../store';
 import history from '../store/history';
+import {Switch} from "react-router";
 
 export default () => (
 	<Provider store={store}>
@@ -26,7 +27,12 @@ export default () => (
 				<Link to="/writing/nieuwe-beelding-in-schilderkunst">Nieuwe beelding in schilderkunst</Link>
 				<br />
 				<Route exact path="/" component={Home} />
-				<Route path="/writing/:id" component={Entry} />
+				<Switch>
+					<Route path="/writing/:id/line/:lineNumber/query/:query" component={Entry} />
+					<Route path="/writing/:id/query/:query" component={Entry} />
+					<Route path="/writing/:id/line/:lineNumber" component={Entry} />
+					<Route path="/writing/:id" component={Entry} />
+				</Switch>
 				<Route path="/search" component={Search} />
 			</div>
 		</ConnectedRouter>

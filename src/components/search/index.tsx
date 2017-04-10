@@ -32,7 +32,7 @@ const Search = (props) =>
 							{
 								props.result[id].map((line, i) =>
 									<ListItem key={i}>
-										<Link to={`/writing/${id}/${line.lineNumber}`}>
+										<Link to={`/writing/${id}/line/${line.lineNumber}/query/${props.query}`}>
 											<No>{line.lineNumber}</No>
 											<span dangerouslySetInnerHTML={{ __html: line.text }} />
 										</Link>

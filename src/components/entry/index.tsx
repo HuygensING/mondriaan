@@ -6,13 +6,6 @@ const Wrapper = styled.div`
 	padding: 5% 10% 10% 10%;
 `;
 
-const EntryText = styled.div`
-	font-size: 18px;
-	line-height: 36px;
-	position: relative;
-	width: 40%;
-`;
-
 const Facsimile = styled.div`
 	background: #EEE;
 	border: 1px solid #CCC;
@@ -48,14 +41,26 @@ class AsyncComponent extends React.Component<any, any> {
 
 	public render() {
 		const Comp = this.state.mod;
-		return Comp ? <Comp /> : null;
+		return Comp ? <Comp {...this.props} /> : null;
 	}
 }
 
+const EntryText = styled.div`
+	font-size: 18px;
+	line-height: 36px;
+	position: relative;
+	width: 40%;
+`;
+
+// ToDo create a query (from search result) navigator
 export default (props) =>
 	<Wrapper>
 		<EntryText>
-			<AsyncComponent load={loaders[props.match.params.id]} />
+			<AsyncComponent
+				lineNumber={props.match.params.lineNumber}
+				load={loaders[props.match.params.id]}
+			  query={props.match.params.query}
+			/>
 		</EntryText>
 		<Facsimile />
 	</Wrapper>;
