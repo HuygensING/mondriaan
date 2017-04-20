@@ -59,13 +59,7 @@ export default (props) =>
 			<AsyncComponent
 				lineNumber={props.match.params.lineNumber}
 				load={loaders[props.match.params.id]}
-			  query={
-			  	// If query is not defined, set it to an empty value (null),
-				  // otherwise HireHighlighter will highlight every text node.
-			  	props.match.params.query === undefined ?
-				    null :
-					  props.match.params.query
-			  }
+			  query={props.match.params.query}
 			/>
 		</EntryText>
 		<Facsimile />

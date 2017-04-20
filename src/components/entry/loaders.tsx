@@ -7,5 +7,5 @@ export default {
 	'schetsboek-1': loadSchetsboek1,
 	'schetsboek-2': loadSchetsboek2,
 	'nieuwe-beelding-in-schilderkunst': loadNbis,
-	'bepaalde-en-onbepaalde-stijl': loadBeo,
+	'bepaalde-en-onbepaalde': loadBeo,
 };
