@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "hire-forms-input": "^3.0.1",
-    "mondrian-components": "^1.2.0",
+    "mondrian-components": "^1.2.1",
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
     "react-redux": "^5.0.3",
@@ -33,7 +33,7 @@
     "bundle-loader": "^0.5.5",
     "connect-modrewrite": "^0.10.1",
     "lodash.debounce": "^4.0.8",
-    "mondrian-entries": "^1.1.1",
+    "mondrian-entries": "^1.1.2",
     "proxy-middleware": "^0.15.0",
     "typescript": "^2.2.1",
     "url": "^0.11.0",
