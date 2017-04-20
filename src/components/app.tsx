@@ -20,18 +20,18 @@ export default () => (
 				<br />
 				<Link to="/search">Search</Link>
 				<br />
-				<Link to="/writing/schetsboek-2">Schetsboek 2</Link>
+				<Link to="/writings/schetsboek-2">Schetsboek 2</Link>
 				<br />
-				<Link to="/writing/bepaalde-en-onbepaalde">Bepaald en onbepaald</Link>
+				<Link to="/writings/bepaalde-en-onbepaalde">Bepaald en onbepaald</Link>
 				<br />
-				<Link to="/writing/nieuwe-beelding-in-schilderkunst">Nieuwe beelding in schilderkunst</Link>
+				<Link to="/writings/nieuwe-beelding-in-schilderkunst">Nieuwe beelding in schilderkunst</Link>
 				<br />
 				<Route exact path="/" component={Home} />
 				<Switch>
-					<Route path="/writing/:id/line/:lineNumber/query/:query" component={Entry} />
-					<Route path="/writing/:id/query/:query" component={Entry} />
-					<Route path="/writing/:id/line/:lineNumber" component={Entry} />
-					<Route path="/writing/:id" component={Entry} />
+					<Route path="/writings/:id/line/:lineNumber/query/:query" component={Entry} />
+					<Route path="/writings/:id/query/:query" component={Entry} />
+					<Route path="/writings/:id/line/:lineNumber" component={Entry} />
+					<Route path="/writings/:id" component={Entry} />
 				</Switch>
 				<Route path="/search" component={Search} />
 			</div>
