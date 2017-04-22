@@ -3,13 +3,13 @@ import { routerMiddleware, routerReducer } from 'react-router-redux';
 import * as reducers from '../reducers';
 import thunkMiddleware from 'redux-thunk';
 import history from './history';
-// const logger = (/* store */) => next => action => {
-// 	if (action.hasOwnProperty('type')) {
-// 		console.log('[REDUX]', action.type, action);
-// 	}
-//
-// 	return next(action);
-// };
+const logger = (/* store */) => next => action => {
+	if (action.hasOwnProperty('type')) {
+		console.log('[REDUX]', action.type, action);
+	}
+
+	return next(action);
+};
 //
 // const createStoreWithMiddleware = applyMiddleware(thunkMiddleware, logger)(createStore);
 //
@@ -31,6 +31,6 @@ export default createStore(
 		...reducers,
 		router: routerReducer
 	}),
-	applyMiddleware(middleware, thunkMiddleware)
+	applyMiddleware(middleware, thunkMiddleware, logger)
 );
 

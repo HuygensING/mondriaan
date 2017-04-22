@@ -1,6 +1,8 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
 import loaders from './loaders';
+import {activateNote} from "src/actions/entry";
 
 const Wrapper = styled.div`
 	padding: 5% 10% 10% 10%;
@@ -46,17 +48,16 @@ class AsyncComponent extends React.Component<any, any> {
 }
 
 const EntryText = styled.div`
-	font-size: 18px;
-	line-height: 36px;
-	position: relative;
 	width: 40%;
 `;
 
 // ToDo create a query (from search result) navigator
-export default (props) =>
+const Entry = (props) =>
 	<Wrapper>
 		<EntryText>
 			<AsyncComponent
+				activateNote={props.activateNote}
+				activeNote={props.activeNote}
 				lineNumber={props.match.params.lineNumber}
 				load={loaders[props.match.params.id]}
 			  query={props.match.params.query}
@@ -64,3 +65,12 @@ export default (props) =>
 		</EntryText>
 		<Facsimile />
 	</Wrapper>;
+
+export default connect(
+	state => ({
+		activeNote: state.entry.noteId,
+	}),
+	{
+		activateNote,
+	}
+)(Entry);
