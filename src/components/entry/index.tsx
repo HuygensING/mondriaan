@@ -1,21 +1,37 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
+import ResizeBar from './resize-bar';
 import loaders from './loaders';
 import {activateNote} from "src/actions/entry";
+import {inlineBlock, mainHeaderHeight} from "src/components/constants";
 
-const Wrapper = styled.div`
-	padding: 5% 10% 10% 10%;
+const Entry = styled.div`
+	height: calc(100% - ${mainHeaderHeight});
+`;
+
+const Text = styled.div`
+	${inlineBlock}
+	height: 100%;
+	overflow-y: auto;
+	padding: 2em 100px 10em 4em;
+	// width: calc(4em + 480px + 100px);
+	width: 50%;
+`;
+
+const Aside = styled.aside`
+	${inlineBlock}
+	height: 100%;
+	position: relative;
+	// width: calc(100% - (4em + 480px + 100px));
+	width: 50%;
 `;
 
 const Facsimile = styled.div`
 	background: #EEE;
 	border: 1px solid #CCC;
-	bottom: 5%
-	position: fixed;
-	right: 10%
-	top: 5%;
-	width: 40%;
+	box-sizing: border-box;
+	height: 100%;
 `;
 
 class AsyncComponent extends React.Component<any, any> {
@@ -47,14 +63,11 @@ class AsyncComponent extends React.Component<any, any> {
 	}
 }
 
-const EntryText = styled.div`
-	width: 40%;
-`;
 
 // ToDo create a query (from search result) navigator
-const Entry = (props) =>
-	<Wrapper>
-		<EntryText>
+const EntryComp = (props) =>
+	<Entry>
+		<Text id="entry-text">
 			<AsyncComponent
 				activateNote={props.activateNote}
 				activeNote={props.activeNote}
@@ -62,9 +75,12 @@ const Entry = (props) =>
 				load={loaders[props.match.params.id]}
 			  query={props.match.params.query}
 			/>
-		</EntryText>
-		<Facsimile />
-	</Wrapper>;
+		</Text>
+		<Aside id="entry-aside">
+			<ResizeBar />
+			<Facsimile />
+		</Aside>
+	</Entry>;
 
 export default connect(
 	state => ({
@@ -73,4 +89,4 @@ export default connect(
 	{
 		activateNote,
 	}
-)(Entry);
+)(EntryComp);
