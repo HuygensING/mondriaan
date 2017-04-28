@@ -1,4 +1,5 @@
 export const primeColor = '#e3c386';
+export const primeColorDark = '#5b4315';
 
 export const inlineBlock = `
 	display: inline-block;

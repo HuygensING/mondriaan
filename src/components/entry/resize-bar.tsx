@@ -21,6 +21,11 @@ class ResizeBarComp extends React.Component<any, any> {
 		document.addEventListener('mouseup', this.mouseUp);
 	}
 
+	public componentWillUnmount() {
+		document.removeEventListener('mousemove', this.mouseMove);
+		document.removeEventListener('mouseup', this.mouseUp);
+	}
+
 	private mouseDown = () => {
 		this.setUserSelect('none');
 		this.setState({ drag: true })

@@ -1,5 +1,7 @@
 const initialState = {
 	activeNote: null,
+	activeTab: 'Facsimile',
+	facsimile: null,
 };
 
 export default function (state = initialState, action) {
@@ -10,6 +12,25 @@ export default function (state = initialState, action) {
 			nextState = {
 				...nextState,
 				...{ activeNote: action.noteId },
+			};
+			break;
+		}
+
+		case 'ACTIVATE_TAB': {
+			nextState = {
+				...nextState,
+				...{ activeTab: action.tabId },
+			};
+			break;
+		}
+
+		case 'ACTIVATE_FACSIMILE': {
+			nextState = {
+				...nextState,
+				...{
+					activeTab: 'Facsimile',
+					facsimile: action.facsimile,
+				}
 			};
 			break;
 		}

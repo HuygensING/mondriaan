@@ -6,7 +6,8 @@
     "outDir": "./build",
     "paths": {
       "src/*": ["./src/*"],
-      "entries/*": ["./__entries__/*"]
+      "entries/*": ["./__entries__/*"],
+      "notes/*": ["./__notes__/*"]
     },
     "removeComments": true,
     "target": "es6"

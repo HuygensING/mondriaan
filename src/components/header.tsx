@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Link} from "react-router-dom";
 import styled from "styled-components";
-import {inlineBlock, mainHeaderHeight, primeColor} from "src/components/constants";
+import {inlineBlock, mainHeaderHeight, primeColor, primeColorDark} from "src/components/constants";
 
 const Header = styled.header`
 	background-color: ${primeColor};
@@ -17,10 +17,11 @@ const H1 = styled.h1`
 	
 	a {
 		${inlineBlock}
+		color: orange;
+		height: 66.66%;
 		position: relative;
 		top: 50%;
 		transform: translateY(-50%);
-		height: 66.66%;
 	}
 	
 	img {
@@ -44,11 +45,13 @@ const Nav = styled.nav`
 	
 	> ul > li {
 		${inlineBlock}
+		color: ${primeColorDark};
 		max-width: 100px;
 		width: 33.33%
 	}
 	
 	> ul > li > a {
+		color: inherit;
 		text-decoration: none;
 	}
 `;
