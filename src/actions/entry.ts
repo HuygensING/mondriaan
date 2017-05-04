@@ -1,12 +1,13 @@
-export const activateNote = (noteId) => (dispatch, getState) =>
+export const activateNote = (note, top) => (dispatch, getState) =>
 	dispatch({
-		noteId,
+		note,
+		top,
 		type: 'ACTIVATE_NOTE',
 	});
 
-export const activateTab = (tabId) => (dispatch, getState) =>
+export const activateTab = (tab) => (dispatch, getState) =>
 	dispatch({
-		tabId,
+		tab,
 		type: 'ACTIVATE_TAB',
 	});
 

@@ -14,7 +14,7 @@ const Aside = styled.aside`
 	height: 100%;
 	overflow: auto;
 	position: relative;
-	width: 50%;
+	width: calc(100% - ${100 + 480 + 100 + 300}px);
 `;
 
 export default (props) =>
@@ -28,6 +28,7 @@ export default (props) =>
 					facsimile={props.facsimile}
 				/>
 			</Tab>
+			{/*
 			<Tab label="Eds Notes">
 				<AsyncComponent
 					activateNote={props.activateNote}
@@ -42,6 +43,7 @@ export default (props) =>
 					load={origNotesLoaders[props.match.params.id]}
 				/>
 			</Tab>
+			*/}
 		</Tabs>
 		<ResizeBar />
 	</Aside>;
