@@ -9,6 +9,7 @@
     "prod": "docker-compose -f docker/docker-compose-dev.yml -f docker/docker-compose-prod.yml up",
     "dist": "webpack -p --output-path dist",
     "entries": "mondrian-entries",
+    "entries-dev": "NODE_ENV=development mondrian-entries",
     "watch": "webpack -w"
   },
   "author": "",
