@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "dev": "docker-compose -f docker/docker-compose-dev.yml up",
-    "prod": "docker-compose -f docker/docker-compose-dev.yml -f docker/docker-compose-prod.yml up",
+    "compose-up": "docker-compose -f docker/docker-compose.yml up --build",
     "dist": "webpack -p --output-path dist",
     "entries": "mondrian-entries",
     "entries-dev": "NODE_ENV=development mondrian-entries",
+    "start": "npm run build && npm run dist && npm run compose-up",
     "watch": "webpack -w"
   },
   "author": "",

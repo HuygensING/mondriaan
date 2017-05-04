@@ -4,7 +4,7 @@ services:
     build:
       context: ../
       dockerfile: docker/Dockerfile-solr
-  client:
+  dev-client:
     build:
       context: ../
       dockerfile: docker/Dockerfile-dev-client
@@ -15,3 +15,11 @@ services:
       - "3001:3001"
     volumes:
       - ../:/app
+  prod-client:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile-prod-client
+    links:
+      - "solr"
+    ports:
+      - "9006:443"
