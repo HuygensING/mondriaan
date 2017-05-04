@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mondriansolrdeployment
+  namespace: mondrian
+spec:
+  template:
+    metadata:
+      labels:
+        app: mondrian
+        tier: searchindex
+        track: test
+    spec:
+      containers:
+        - name: mondriansolrcontainer
+          image: "mondrian/solr:1.0.0"
+          ports:
+            - containerPort: 8983

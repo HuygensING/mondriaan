@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mondrianclientdeployment
+  namespace: mondrian
+spec:
+  template:
+    metadata:
+      labels:
+        app: mondrian
+        tier: client
+        track: test
+    spec:
+      containers:
+        - name: mondrianclientcontainer
+          image: "mondrian/client:1.0.0"
+          ports:
+            - containerPort: 443
