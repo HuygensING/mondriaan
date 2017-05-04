@@ -4,6 +4,7 @@ dist
 mondrian-client.iml
 node_modules
 __entries__
+__xml__
 __notes__
 __solr__
 config.json
