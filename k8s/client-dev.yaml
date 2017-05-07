@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mondrianclientdevdeployment
+spec:
+  template:
+    metadata:
+      labels:
+        app: mondrian
+        tier: client
+        track: dev
+    spec:
+      containers:
+        - name: mondrianclientdevcontainer
+          image: "mondrian/client-dev:1.0.0"
+          volumeMounts:
+            - mountPath: /app
+              name: host-mount
+      volumes:
+        - name: host-mount
+          hostPath:
+            path: /mount-9p
