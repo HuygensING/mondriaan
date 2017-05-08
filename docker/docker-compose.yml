@@ -1,6 +1,6 @@
 version: "3"
 services:
-  solr:
+  mondriansolrsvc:
     build:
       context: ../
       dockerfile: docker/Dockerfile-solr
@@ -9,7 +9,7 @@ services:
       context: ../
       dockerfile: docker/Dockerfile-dev-client
     links:
-      - "solr"
+      - "mondriansolrsvc"
     ports:
       - "3000:3000"
       - "3001:3001"
@@ -20,6 +20,6 @@ services:
       context: ../
       dockerfile: docker/Dockerfile-prod-client
     links:
-      - "solr"
+      - "mondriansolrsvc"
     ports:
       - "9006:443"
