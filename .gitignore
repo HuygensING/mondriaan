@@ -10,3 +10,4 @@ __solr__
 config.json
 docker/.htpasswd
 static/facsimiles
+*.swp
