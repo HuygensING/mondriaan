@@ -14,7 +14,7 @@ const H1 = styled.h1`
 	margin: 0;
 	text-align: center;
 	width: 50%;
-	
+
 	a {
 		${inlineBlock}
 		color: orange;
@@ -23,7 +23,7 @@ const H1 = styled.h1`
 		top: 50%;
 		transform: translateY(-50%);
 	}
-	
+
 	img {
 		display: block;
 		height: 100%;
@@ -35,21 +35,21 @@ const Nav = styled.nav`
 	font-size: 1.2em;
 	line-height: ${mainHeaderHeight};
 	width: 50%;
-	
+
 	> ul {
 		list-style: none;
 		margin: 0;
 		padding: 0;
 		text-align: center;
 	}
-	
+
 	> ul > li {
 		${inlineBlock}
 		color: ${primeColorDark};
 		max-width: 100px;
 		width: 33.33%
 	}
-	
+
 	> ul > li > a {
 		color: inherit;
 		text-decoration: none;

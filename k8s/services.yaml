@@ -48,6 +48,7 @@ spec:
     track: dev
   ports:
     - name: http
+      nodePort: 30003
       port: 3000
       targetPort: 3000
   type: NodePort
