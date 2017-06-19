@@ -6,10 +6,12 @@
   "scripts": {
     "build": "webpack",
     "compose-up": "docker-compose -f docker/docker-compose.yml up --build",
-    "dist": "webpack -p --output-path dist",
+    "compose-up-dist": "docker-compose -f docker/docker-compose.yml -f docker/docker-compose-prod.yml up --build",
+    "dist": "webpack --output-path dist",
     "entries": "mondrian-entries",
     "entries-dev": "NODE_ENV=development mondrian-entries",
     "start": "npm run build && npm run dist && npm run compose-up",
+    "start-dist": "npm run dist && npm run compose-up-dist",
     "watch": "webpack -w"
   },
   "author": "",
@@ -39,8 +41,8 @@
     "mondrian-entries": "^1.2.2",
     "proxy-middleware": "^0.15.0",
     "typescript": "^2.2.1",
+    "uglify-es": "^3.0.18",
     "url": "^0.11.0",
-    "webpack": "^2.3.3",
-    "uglify-js": "git+https://github.com/mishoo/UglifyJS2.git#harmony"
+    "webpack": "^2.3.3"
   }
 }
