@@ -38,7 +38,7 @@
     "bundle-loader": "^0.5.5",
     "connect-modrewrite": "^0.10.1",
     "lodash.debounce": "^4.0.8",
-    "mondrian-entries": "^1.2.3",
+    "mondrian-entries": "^1.2.4",
     "proxy-middleware": "^0.15.0",
     "typescript": "^2.2.1",
     "uglify-es": "^3.0.18",
