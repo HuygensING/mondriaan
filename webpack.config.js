@@ -1,9 +1,10 @@
 const path = require('path');
+const pkg = require('./package.json');
 
 module.exports = {
 	entry: "./src/index.tsx",
 	output: {
-		filename: "[name].js",
+		filename: "[name]-" + pkg.version + ".js",
 		path: __dirname + "/build",
 		publicPath: '/build/',
 	},
