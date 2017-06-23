@@ -24,8 +24,6 @@ export default class AsyncComponent extends React.Component<any, any> {
 	}
 
 	public render() {
-		console.log('mod', this.state.mod);
-		console.log('loader', this.props.load);
 		const Comp = this.state.mod;
 		return Comp ? <Comp {...this.props} /> : null;
 	}
