@@ -6,7 +6,6 @@ import Aside from './aside';
 import {activateFacsimile, activateNote, activateTab} from "src/actions/entry";
 import {inlineBlock, mainHeaderHeight} from "src/components/constants";
 import AsyncComponent from "src/components/async";
-import edsNotesLoaders from './eds-notes-loaders';
 
 const Entry = styled.div`
 	height: calc(100% - ${mainHeaderHeight});
