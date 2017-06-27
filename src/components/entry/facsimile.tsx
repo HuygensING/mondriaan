@@ -26,7 +26,7 @@ class Facsimile extends React.Component<any, any> {
 
 	private setFacsimile(props) {
 		if (props.facsimile != null && props.facsimile !== '') {
-			this.osd.open(`/static/facsimiles/${props.facsimile}.dzi`)
+			this.osd.open(`/static2/facsimiles/${props.facsimile}.dzi`)
 		}
 	}
 

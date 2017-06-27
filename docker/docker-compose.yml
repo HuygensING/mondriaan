@@ -15,3 +15,6 @@ services:
       - "3001:3001"
     volumes:
       - ../:/app
+      - mondrian_facsimiles:/app/static2
+volumes:
+  mondrian_facsimiles:

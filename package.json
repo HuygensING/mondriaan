@@ -27,7 +27,7 @@
   "dependencies": {
     "hire-forms-input": "^3.0.1",
     "hire-tabs": "^2.0.3",
-    "mondrian-components": "^1.4.1",
+    "mondrian-components": "^1.4.2",
     "openseadragon": "^2.2.1",
     "react": "^15.5.3",
     "react-dom": "^15.5.3",

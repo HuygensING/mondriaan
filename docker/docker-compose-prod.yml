@@ -8,3 +8,7 @@ services:
       - "mondriansolrsvc"
     ports:
       - "9006:443"
+    volumes:
+      - mondrian_facsimiles:/usr/share/nginx/html/static2
+volumes:
+  mondrian_facsimiles:
