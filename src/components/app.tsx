@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux'
-import {Switch} from "react-router";
+import { Switch } from "react-router";
 
 import About from './about';
 import Entry from './entry';

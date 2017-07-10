@@ -8,7 +8,10 @@ services:
       - "mondriansolrsvc"
     ports:
       - "443:443"
+    restart: always
     volumes:
       - mondrian_facsimiles:/usr/share/nginx/html/static2
+      - mondrian_secrets:/etc/nginx/ssl
 volumes:
   mondrian_facsimiles:
+  mondrian_secrets:
